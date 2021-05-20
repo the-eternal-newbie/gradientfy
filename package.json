@@ -23,6 +23,7 @@
   "scripts": {
     "start": "start-storybook -p 9009 -s public",
     "build": "rollup -c",
+    "generate-themes": "node src/utils/colorGenerator.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook:export": "build-storybook",

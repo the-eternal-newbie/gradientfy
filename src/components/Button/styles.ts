@@ -1,6 +1,7 @@
 import { createUseStyles } from 'react-jss';
 import generator from '../../utils/gradientGenerator';
 import theme from '../../style';
+
 interface IProps {
   color?: string;
   degree?: number;
@@ -18,8 +19,9 @@ export default createUseStyles({
         props.colors ? props.colors : theme.defaultGradient,
         props.degree ? props.degree : 90
       ),
-    borderWidth: 1,
-    borderColor: (props: IProps) => props.color || theme.colorPrimary,
+    border: 'none',
+    borderRadius: 8,
+    cursor: 'pointer',
     padding: '15px 32px',
     transition: 'all 250ms',
     '&:not([disabled])&:hover': {
