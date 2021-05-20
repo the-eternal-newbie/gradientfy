@@ -27,7 +27,7 @@ const Button: React.FC<IButton> = (props: IButton) => {
   };
 
   const rootProps = {
-    className: classes.root,
+    className: classes.button,
     type,
     onClick: handleClick,
     disabled,

@@ -1,18 +1,30 @@
 import { createUseStyles } from 'react-jss';
+import generator from '../../utils/gradientGenerator';
+import theme from '../../style';
+interface IProps {
+  color?: string;
+  degree?: number;
+  gradientType?: 'linear' | 'radial';
+  colors?: { color: string; percent: number }[];
+}
 
-export default createUseStyles((theme: any) => ({
-  root: {
-    color: (props: { color: string }) => props.color || theme.colorPrimary,
-    backgroundColor: 'white',
+export default createUseStyles({
+  button: {
+    color: (props: IProps) => props.color || theme.colorPrimary,
+    // background: 'rgb(254,218,65)',
+    background: (props: IProps) =>
+      generator(
+        props.gradientType ? props.gradientType : 'linear',
+        props.colors ? props.colors : theme.defaultGradient,
+        props.degree ? props.degree : 90
+      ),
     borderWidth: 1,
-    borderColor: (props: { color: string }) =>
-      props.color || theme.colorPrimary,
+    borderColor: (props: IProps) => props.color || theme.colorPrimary,
     padding: '15px 32px',
     transition: 'all 250ms',
     '&:not([disabled])&:hover': {
       color: 'white',
-      backgroundColor: (props: { color: string }) =>
-        props.color || theme.colorPrimary,
+      backgroundColor: (props: IProps) => props.color || theme.colorPrimary,
     },
     '&:focus': {
       outline: 'none',
@@ -25,4 +37,4 @@ export default createUseStyles((theme: any) => ({
   label: {
     fontWeight: 'bold',
   },
-}));
+});
