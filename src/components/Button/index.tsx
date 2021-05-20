@@ -1,5 +1,6 @@
 import * as React from 'react';
 import useStyles from './styles';
+import { IButton } from './types';
 
 export type Props = {
   children: React.ReactNode;
@@ -10,14 +11,15 @@ export type Props = {
   dataTestId?: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
 
-const Button: React.FC<Props> = ({
-  children,
-  onClick = () => {},
-  disabled = false,
-  type = 'submit',
-  color = '',
-  dataTestId = 'button',
-}) => {
+const Button: React.FC<IButton> = (props: IButton) => {
+  const {
+    children,
+    onClick = () => {},
+    disabled = false,
+    type = 'submit',
+    color = '',
+    dataTestId = 'button',
+  } = props;
   const classes = useStyles({ color });
 
   const handleClick = () => {
