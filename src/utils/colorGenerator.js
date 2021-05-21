@@ -5,20 +5,35 @@ const gradientThemes = () => {
   const gradientThemes= {};
   Object.keys(themes).forEach((theme) => {
     const gradients = {
-      primaryGradient: [
+      primary: [
         { color: themes[theme]['c'], percent: 0 },
         { color: themes[theme]['a'], percent: 50 },
-        { color: themes[theme]['f'], percent: 100 },
+        { color: themes[theme]['g'], percent: 80 },
       ],
-      secondaryGradient: [
+      'inverse-primary': [
+        { color: themes[theme]['c'], percent: 0 },
+        { color: themes[theme]['a'], percent: 20 },
+        { color: themes[theme]['g'], percent: 50 },
+      ],
+      secondary: [
         { color: themes[theme]['j'], percent: 0 },
         { color: themes[theme]['h'], percent: 50 },
-        { color: themes[theme]['i'], percent: 100 },
+        { color: themes[theme]['i'], percent: 80 },
       ],
-      alternativeGradient: [
+      'inverse-secondary': [
+        { color: themes[theme]['j'], percent: 0 },
+        { color: themes[theme]['h'], percent: 20 },
+        { color: themes[theme]['i'], percent: 50 },
+      ],
+      alternative: [
         { color: themes[theme]['b'], percent: 0 },
         { color: themes[theme]['d'], percent: 50 },
-        { color: themes[theme]['e'], percent: 100 },
+        { color: themes[theme]['e'], percent: 80 },
+      ],
+      'inverse-alternative': [
+        { color: themes[theme]['b'], percent: 0 },
+        { color: themes[theme]['d'], percent: 20 },
+        { color: themes[theme]['e'], percent: 50 },
       ],
       gradient2: [],
       gradient3: [],

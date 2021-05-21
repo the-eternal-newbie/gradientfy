@@ -1,32 +1,39 @@
+import '../../style/_fonts.css';
+import * as CSS from 'csstype';
 import { createUseStyles } from 'react-jss';
 import generator from '../../utils/gradientGenerator';
+import { LightenDarkenColor } from '../../utils/_func';
 import theme from '../../style';
+import { IGradient } from '../types';
 
-interface IProps {
-  color?: string;
-  degree?: number;
-  gradientType?: 'linear' | 'radial';
-  colors?: { color: string; percent: number }[];
-}
+interface IStyle extends IGradient, CSS.Properties {}
 
 export default createUseStyles({
   button: {
-    color: (props: IProps) => props.color || theme.colorPrimary,
-    // background: 'rgb(254,218,65)',
-    background: (props: IProps) =>
+    color: (props: IStyle) => props.color || theme.colorPrimary,
+    background: (props: IStyle) =>
       generator(
         props.gradientType ? props.gradientType : 'linear',
-        props.colors ? props.colors : theme.defaultGradient,
+        props.gradientColors ? props.gradientColors : theme.defaultGradient,
         props.degree ? props.degree : 90
       ),
     border: 'none',
-    borderRadius: 8,
+    borderRadius: (props: IStyle) =>
+      props.borderRadius ? props.borderRadius : 8,
     cursor: 'pointer',
     padding: '15px 32px',
-    transition: 'all 250ms',
+    transition: 'background 1000ms ease-out',
     '&:not([disabled])&:hover': {
-      color: 'white',
-      backgroundColor: (props: IProps) => props.color || theme.colorPrimary,
+      color: (props: IStyle) =>
+        LightenDarkenColor(props.color ? props.color : theme.colorPrimary, -10),
+      background: (props: IStyle) =>
+        generator(
+          props.gradientType ? props.gradientType : 'linear',
+          props.gradientColors
+            ? props.gradientColors
+            : theme.gradientThemes['pink-sunflower']['inverse-primary'],
+          props.degree ? props.degree : 90
+        ),
     },
     '&:focus': {
       outline: 'none',
@@ -37,6 +44,9 @@ export default createUseStyles({
     },
   },
   label: {
-    fontWeight: 'bold',
+    fontFamily: "'Lato', sans-serif",
+    fontSize: 15,
+    fontWeight: 600,
+    textTransform: 'uppercase',
   },
 });

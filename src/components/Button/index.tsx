@@ -2,15 +2,6 @@ import * as React from 'react';
 import useStyles from './styles';
 import { IButton } from './types';
 
-export type Props = {
-  children: React.ReactNode;
-  onClick?: () => void;
-  color?: string;
-  type?: string;
-  disabled?: boolean;
-  dataTestId?: string;
-} & React.ButtonHTMLAttributes<HTMLButtonElement>;
-
 const Button: React.FC<IButton> = (props: IButton) => {
   const {
     children,

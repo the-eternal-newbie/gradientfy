@@ -1,6 +1,6 @@
 const gradientThemes ={
   "base": {
-    "primaryGradient": [
+    "primary": [
       {
         "color": "#ffffffff",
         "percent": 0
@@ -11,24 +11,24 @@ const gradientThemes ={
       },
       {
         "color": "#ffffffff",
-        "percent": 100
+        "percent": 80
       }
     ],
-    "secondaryGradient": [
+    "inverse-primary": [
       {
         "color": "#ffffffff",
         "percent": 0
       },
       {
         "color": "#ffffffff",
-        "percent": 50
+        "percent": 20
       },
       {
         "color": "#ffffffff",
-        "percent": 100
+        "percent": 50
       }
     ],
-    "alternativeGradient": [
+    "secondary": [
       {
         "color": "#ffffffff",
         "percent": 0
@@ -39,7 +39,49 @@ const gradientThemes ={
       },
       {
         "color": "#ffffffff",
-        "percent": 100
+        "percent": 80
+      }
+    ],
+    "inverse-secondary": [
+      {
+        "color": "#ffffffff",
+        "percent": 0
+      },
+      {
+        "color": "#ffffffff",
+        "percent": 20
+      },
+      {
+        "color": "#ffffffff",
+        "percent": 50
+      }
+    ],
+    "alternative": [
+      {
+        "color": "#ffffffff",
+        "percent": 0
+      },
+      {
+        "color": "#ffffffff",
+        "percent": 50
+      },
+      {
+        "color": "#ffffffff",
+        "percent": 80
+      }
+    ],
+    "inverse-alternative": [
+      {
+        "color": "#ffffffff",
+        "percent": 0
+      },
+      {
+        "color": "#ffffffff",
+        "percent": 20
+      },
+      {
+        "color": "#ffffffff",
+        "percent": 50
       }
     ],
     "gradient2": [
@@ -278,7 +320,7 @@ const gradientThemes ={
     ]
   },
   "pink-sunflower": {
-    "primaryGradient": [
+    "primary": [
       {
         "color": "#ffde59ff",
         "percent": 0
@@ -288,11 +330,25 @@ const gradientThemes ={
         "percent": 50
       },
       {
-        "color": "#ffb198ff",
-        "percent": 100
+        "color": "#ffafd7ff",
+        "percent": 80
       }
     ],
-    "secondaryGradient": [
+    "inverse-primary": [
+      {
+        "color": "#ffde59ff",
+        "percent": 0
+      },
+      {
+        "color": "#ffc331ff",
+        "percent": 20
+      },
+      {
+        "color": "#ffafd7ff",
+        "percent": 50
+      }
+    ],
+    "secondary": [
       {
         "color": "#e04969ff",
         "percent": 0
@@ -303,10 +359,24 @@ const gradientThemes ={
       },
       {
         "color": "#f07d81ff",
-        "percent": 100
+        "percent": 80
       }
     ],
-    "alternativeGradient": [
+    "inverse-secondary": [
+      {
+        "color": "#e04969ff",
+        "percent": 0
+      },
+      {
+        "color": "#ffb0b8ff",
+        "percent": 20
+      },
+      {
+        "color": "#f07d81ff",
+        "percent": 50
+      }
+    ],
+    "alternative": [
       {
         "color": "#ffd145ff",
         "percent": 0
@@ -317,7 +387,21 @@ const gradientThemes ={
       },
       {
         "color": "#ffc798ff",
-        "percent": 100
+        "percent": 80
+      }
+    ],
+    "inverse-alternative": [
+      {
+        "color": "#ffd145ff",
+        "percent": 0
+      },
+      {
+        "color": "#ffd379ff",
+        "percent": 20
+      },
+      {
+        "color": "#ffc798ff",
+        "percent": 50
       }
     ],
     "gradient2": [
@@ -556,7 +640,7 @@ const gradientThemes ={
     ]
   },
   "mean-pinky": {
-    "primaryGradient": [
+    "primary": [
       {
         "color": "#ffffffff",
         "percent": 0
@@ -566,11 +650,25 @@ const gradientThemes ={
         "percent": 50
       },
       {
-        "color": "#8b73ffff",
-        "percent": 100
+        "color": "#c58eeeff",
+        "percent": 80
       }
     ],
-    "secondaryGradient": [
+    "inverse-primary": [
+      {
+        "color": "#ffffffff",
+        "percent": 0
+      },
+      {
+        "color": "#e2a4ffff",
+        "percent": 20
+      },
+      {
+        "color": "#c58eeeff",
+        "percent": 50
+      }
+    ],
+    "secondary": [
       {
         "color": "#f8eaffff",
         "percent": 0
@@ -581,10 +679,24 @@ const gradientThemes ={
       },
       {
         "color": "#fcc9eeff",
-        "percent": 100
+        "percent": 80
       }
     ],
-    "alternativeGradient": [
+    "inverse-secondary": [
+      {
+        "color": "#f8eaffff",
+        "percent": 0
+      },
+      {
+        "color": "#ffa8dcff",
+        "percent": 20
+      },
+      {
+        "color": "#fcc9eeff",
+        "percent": 50
+      }
+    ],
+    "alternative": [
       {
         "color": "#f1d2ffff",
         "percent": 0
@@ -595,7 +707,21 @@ const gradientThemes ={
       },
       {
         "color": "#ba6fd3ff",
-        "percent": 100
+        "percent": 80
+      }
+    ],
+    "inverse-alternative": [
+      {
+        "color": "#f1d2ffff",
+        "percent": 0
+      },
+      {
+        "color": "#e86aa7ff",
+        "percent": 20
+      },
+      {
+        "color": "#ba6fd3ff",
+        "percent": 50
       }
     ],
     "gradient2": [
@@ -834,7 +960,7 @@ const gradientThemes ={
     ]
   },
   "night-light": {
-    "primaryGradient": [
+    "primary": [
       {
         "color": "#4d338fff",
         "percent": 0
@@ -844,11 +970,25 @@ const gradientThemes ={
         "percent": 50
       },
       {
-        "color": "#67d4f5ff",
-        "percent": 100
+        "color": "#0fbbf5ff",
+        "percent": 80
       }
     ],
-    "secondaryGradient": [
+    "inverse-primary": [
+      {
+        "color": "#4d338fff",
+        "percent": 0
+      },
+      {
+        "color": "#bb63bfff",
+        "percent": 20
+      },
+      {
+        "color": "#0fbbf5ff",
+        "percent": 50
+      }
+    ],
+    "secondary": [
       {
         "color": "#0410bfff",
         "percent": 0
@@ -859,10 +999,24 @@ const gradientThemes ={
       },
       {
         "color": "#394ab8ff",
-        "percent": 100
+        "percent": 80
       }
     ],
-    "alternativeGradient": [
+    "inverse-secondary": [
+      {
+        "color": "#0410bfff",
+        "percent": 0
+      },
+      {
+        "color": "#4466fcff",
+        "percent": 20
+      },
+      {
+        "color": "#394ab8ff",
+        "percent": 50
+      }
+    ],
+    "alternative": [
       {
         "color": "#6123a8ff",
         "percent": 0
@@ -873,7 +1027,21 @@ const gradientThemes ={
       },
       {
         "color": "#97a5fcff",
-        "percent": 100
+        "percent": 80
+      }
+    ],
+    "inverse-alternative": [
+      {
+        "color": "#6123a8ff",
+        "percent": 0
+      },
+      {
+        "color": "#9aa8e6ff",
+        "percent": 20
+      },
+      {
+        "color": "#97a5fcff",
+        "percent": 50
       }
     ],
     "gradient2": [

@@ -1,10 +1,12 @@
-import React from 'react';
+import * as React from 'react';
+import { IGradient } from '../types';
 
-export interface IButton {
+export type IButton = {
   children: React.ReactNode;
-  onClick: () => unknown;
-  disabled: boolean;
-  type: 'submit';
-  color: string;
-  dataTestId: string;
-}
+  onClick?: () => void;
+  color?: string;
+  type?: string;
+  disabled?: boolean;
+  dataTestId?: string;
+} & React.ButtonHTMLAttributes<HTMLButtonElement> &
+  IGradient;
