@@ -1,5 +1,5 @@
 import * as React from 'react';
-import useStyles from './styles';
+import { StyledButton, Label } from './styles';
 import { IButton } from './types';
 
 const Button: React.FC<IButton> = (props: IButton) => {
@@ -10,25 +10,32 @@ const Button: React.FC<IButton> = (props: IButton) => {
     type = 'submit',
     color = '',
     dataTestId = 'button',
+    gradientFill = 'full',
   } = props;
-  const classes = useStyles({ color });
 
   const handleClick = () => {
     if (!disabled && onClick) onClick();
   };
 
   const rootProps = {
-    className: classes.button,
     type,
+    color,
     onClick: handleClick,
     disabled,
     'data-testid': dataTestId,
   };
 
-  return (
-    <button {...rootProps}>
-      <span className={classes.label}>{children}</span>
-    </button>
+  return gradientFill === 'full' ? (
+    <StyledButton {...rootProps}>
+      <Label>{children}</Label>
+    </StyledButton>
+  ) : (
+    // <button {...rootProps}>
+    //   <span className={classes.label}>{children}</span>
+    // </button>
+    <StyledButton {...rootProps}>
+      <Label>{children}</Label>
+    </StyledButton>
   );
 };
 
